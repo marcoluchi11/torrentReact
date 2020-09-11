@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
+import Alert from "react-bootstrap/Alert";
 const Torrent = () => {
   const { torrent } = useContext(PeliculasContext);
 
@@ -7,7 +8,7 @@ const Torrent = () => {
     <Fragment>
       <h3>Descarga por Torrent</h3>
       {torrent === null ? (
-        <p>No se encontraron Torrents</p>
+        <Alert variant="info">No se encontraron Torrents</Alert>
       ) : (
         torrent.torrents.map((torrente) => (
           <Fragment key={torrente.hash}>
