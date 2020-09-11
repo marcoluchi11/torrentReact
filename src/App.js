@@ -6,18 +6,19 @@ import Pelicula from "./components/Pelicula";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Idpelicula from "./components/Idpelicula";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
       <PeliculasProvider>
-        <Container>
+        <Container className="minheight">
           <Jumbotron>
             <Switch>
               <Route exact path="/" component={Pelicula} />
               <Route path="/:id" component={Idpelicula} />
             </Switch>
           </Jumbotron>
+          <Footer />
         </Container>
       </PeliculasProvider>
     </Router>
