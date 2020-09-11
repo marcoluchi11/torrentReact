@@ -19,7 +19,11 @@ const PeliculasProvider = (props) => {
       ]);
 
       setInfo(info);
-      setTorrent(torrent.data.movies[0]);
+      if (torrent.data.movies === undefined) {
+        setTorrent(null);
+      } else {
+        setTorrent(torrent.data.movies[0]);
+      }
     };
     pedidoDatos();
   }, [seleccion]);
