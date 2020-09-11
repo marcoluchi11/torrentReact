@@ -23,7 +23,6 @@ const Pelicula = () => {
     }
     setError(false);
     const buscarPeliculas = async () => {
-      // const url = `https://yts.mx/api/v2/list_movies.json?query_term=${busqueda.nombre}`;
       const url = `http://www.omdbapi.com/?s=${busqueda.nombre}&type=movie&apikey=89a340b7`;
 
       const search = await fetch(url);
