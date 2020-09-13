@@ -6,6 +6,10 @@ const Imagen = styled.img`
   width: 250px;
   height: 250px;
   padding: 0.5rem;
+  @media all and (max-width: 799px) and (min-width: 300px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 const ListaPelicula = () => {
   const { peliculas, setSeleccion, setError } = useContext(PeliculasContext);
