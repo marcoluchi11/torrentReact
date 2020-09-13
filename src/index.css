@@ -3,14 +3,11 @@ html {
   min-height: 100%;
 }
 body {
+  background: #d9d9d9 !important;
   margin: 0 0 100px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.minheight {
+.altura {
   min-height: calc(100vh - 40px) !important;
 }
 footer {
@@ -20,4 +17,8 @@ footer {
   height: 100px;
   width: 100%;
   overflow: hidden;
+}
+
+.links {
+  padding-right: 2rem !important;
 }
