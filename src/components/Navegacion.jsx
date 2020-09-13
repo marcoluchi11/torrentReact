@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const Navegacion = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Link to="/">TorrentGuia</Link>
+      <Link to="/" className="links">
+        TorrentGuia
+      </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
