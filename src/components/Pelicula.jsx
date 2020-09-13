@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ListaPelicula from "./ListaPelicula";
 import Error from "./Error";
+
 const Pelicula = () => {
   const { busqueda, setBusqueda, setPeliculas, error, setError } = useContext(
     PeliculasContext
@@ -40,13 +41,10 @@ const Pelicula = () => {
     <section>
       <Form>
         <InputGroup onChange={handleChange} size="sm" className="mb-3">
-          <InputGroup.Prepend>
-            <InputGroup.Text id="inputGroup-sizing-sm">
-              Peliculas
-            </InputGroup.Text>
-          </InputGroup.Prepend>
+          <InputGroup.Prepend></InputGroup.Prepend>
           <FormControl
             name="nombre"
+            placeholder="Busca tu pelicula..."
             aria-label="Busca peliculas"
             aria-describedby="inputGroup-sizing-sm"
           />
@@ -62,7 +60,6 @@ const Pelicula = () => {
           Buscar Movie
         </Button>
       </Form>
-      <h3>Listado de Peliculas</h3>
       <ListaPelicula />
     </section>
   );
