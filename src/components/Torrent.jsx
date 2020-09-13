@@ -1,12 +1,16 @@
 import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
+import styled from "@emotion/styled";
 import Alert from "react-bootstrap/Alert";
+const Titulo = styled.h3`
+  text-decoration: underline;
+`;
 const Torrent = () => {
   const { torrent } = useContext(PeliculasContext);
 
   return (
     <Fragment>
-      <h3>Descarga por Torrent</h3>
+      <Titulo>Descarga por Torrent</Titulo>
       {torrent === null ? (
         <Alert variant="info">No se encontraron Torrents</Alert>
       ) : (
