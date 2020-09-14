@@ -9,6 +9,10 @@ const PeliculasProvider = (props) => {
   const [info, setInfo] = useState(null);
   const [error, setError] = useState(false);
   const [torrent, setTorrent] = useState(null);
+  const [consulta, setConsulta] = useState({
+    Mail: "",
+    Consulta: "",
+  });
   useEffect(() => {
     const pedidoDatos = async () => {
       const url = `http://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
@@ -36,12 +40,14 @@ const PeliculasProvider = (props) => {
         seleccion,
         peliculas,
         torrent,
+        consulta,
         setBusqueda,
         setPeliculas,
         setSeleccion,
         setInfo,
         setError,
         setTorrent,
+        setConsulta,
       }}
     >
       {props.children}
