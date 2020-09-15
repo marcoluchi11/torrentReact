@@ -5,6 +5,7 @@ import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ListaPelicula from "./ListaPelicula";
+import Busquedaimg from "./../images/busqueda.svg";
 import Error from "./Error";
 
 const Pelicula = () => {
@@ -24,7 +25,7 @@ const Pelicula = () => {
     }
     setError(false);
     const buscarPeliculas = async () => {
-      const url = `http://www.omdbapi.com/?s=${busqueda.nombre}&type=movie&apikey=${process.env.REACT_APP_SECRET_KEY}`;
+      const url = `http://www.omdbapi.com/?s=${busqueda.nombre}&apikey=${process.env.REACT_APP_SECRET_KEY}`;
 
       const search = await fetch(url);
       const response = await search.json();
@@ -49,7 +50,9 @@ const Pelicula = () => {
             aria-describedby="inputGroup-sizing-sm"
           />
         </InputGroup>
+
         {error ? <Error mensaje="No se encontraron peliculas" /> : null}
+
         <Button
           type="submit"
           onClick={handleClick}
@@ -58,6 +61,7 @@ const Pelicula = () => {
           block
         >
           Buscar Movie
+          <img src={Busquedaimg} className="ml-2" alt="" />
         </Button>
       </Form>
       <ListaPelicula />
