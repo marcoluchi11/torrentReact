@@ -5,6 +5,7 @@ html {
 body {
   background: #d9d9d9 !important;
   margin: 0 0 100px;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .altura {
@@ -24,7 +25,8 @@ footer {
   color: #ffffff;
 }
 a:hover {
-  color: black !important;
+  color: grey !important;
+  text-decoration: none !important;
 }
 a.button {
   -webkit-appearance: button;
@@ -33,4 +35,15 @@ a.button {
 
   text-decoration: none;
   color: initial;
+}
+.nav {
+  height: 100% !important;
+}
+.letra {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.letralinks {
+  font-size: 1rem;
+  font-weight: 300;
 }
