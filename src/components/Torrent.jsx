@@ -18,7 +18,7 @@ const Torrent = () => {
           <Fragment key={torrente.hash}>
             <a href={torrente.url}>Descarga aqui en {torrente.quality}</a>
             <p>Seeds: {torrente.seeds}</p>
-            <p>Tamano: {torrente.size}</p>
+            <p>Tamaño: {torrente.size}</p>
           </Fragment>
         ))
       )}
