@@ -8,6 +8,7 @@ import Torrent from "./Torrent";
 import Loading from "./Loading";
 import flechita from "./../images/flechaatras.svg";
 import styled from "@emotion/styled";
+import TablaTorrent from "./TablaTorrent";
 const ImagenPelicula = styled.div`
   display: flex;
   justify-content: center;
@@ -28,28 +29,33 @@ const Idpelicula = () => {
       {info === null ? (
         <Loading />
       ) : (
-        <Row>
-          <Col>
-            <ImagenPelicula>
-              <img src={info.Poster} alt="" />
-            </ImagenPelicula>
-          </Col>
-          <Col>
-            <h1>{info.Title}</h1>
-            <h3>Año: {info.Year}</h3>
-            <h3> Duracion : {info.Runtime}</h3>
-            <h5>Director: {info.Director}</h5>
-            <p>{info.Plot}</p>
-            <p>Puntuacion : {info.Metascore}</p>
-            <Torrent />
-            <Link to="/">
-              <Button variant="secondary" onClick={handleClick} block>
-                <img className="mr-2" src={flechita} alt="" />
-                Volver
-              </Button>
-            </Link>
-          </Col>
-        </Row>
+        <Fragment>
+          <Row>
+            <Col>
+              <ImagenPelicula>
+                <img src={info.Poster} alt="" />
+              </ImagenPelicula>
+            </Col>
+            <Col>
+              <h1>{info.Title}</h1>
+              <h3>Año: {info.Year}</h3>
+              <h3> Duracion : {info.Runtime}</h3>
+              <h5>Director: {info.Director}</h5>
+              <p>{info.Plot}</p>
+              <p>Puntuacion : {info.Metascore}</p>
+              <Torrent />
+              <Link to="/">
+                <Button variant="secondary" onClick={handleClick} block>
+                  <img className="mr-2" src={flechita} alt="" />
+                  Volver
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+          <Row>
+            <TablaTorrent />
+          </Row>
+        </Fragment>
       )}
     </Fragment>
   );
