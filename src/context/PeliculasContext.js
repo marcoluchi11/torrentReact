@@ -13,6 +13,7 @@ const PeliculasProvider = (props) => {
     Mail: "",
     Consulta: "",
   });
+  const [busqTorrent, setBusqTorrent] = useState([]);
   const [enviado, setEnviado] = useState(false);
   useEffect(() => {
     const pedidoDatos = async () => {
@@ -43,10 +44,12 @@ const PeliculasProvider = (props) => {
         torrent,
         consulta,
         enviado,
+        busqTorrent,
         setBusqueda,
         setPeliculas,
         setSeleccion,
         setInfo,
+        setBusqTorrent,
         setError,
         setTorrent,
         setConsulta,
