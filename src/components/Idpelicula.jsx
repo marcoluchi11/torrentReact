@@ -15,14 +15,19 @@ const ImagenPelicula = styled.div`
   align-items: flex-start;
 `;
 const Idpelicula = () => {
-  const { setSeleccion, info, setInfo, setBusqTorrent } = useContext(
-    PeliculasContext
-  );
+  const {
+    setSeleccion,
+    info,
+    setInfo,
+    setBusqTorrent,
+    setBusqueda,
+  } = useContext(PeliculasContext);
   //const { Title, Poster, Year, Director, Plot, Runtime, Metascore } = info;
   const handleClick = () => {
     setSeleccion({});
     setInfo(null);
     setBusqTorrent([]);
+    setBusqueda({ nombre: "" });
   };
   return (
     <Fragment>
