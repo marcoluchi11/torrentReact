@@ -3,10 +3,10 @@ let cors = require("cors");
 const express = require("express");
 const TorrentSearchApi = require("torrent-search-api");
 const app = express();
-//`app.use(cors());
+app.use(cors());
 TorrentSearchApi.enableProvider("Yts");
 TorrentSearchApi.enableProvider("ThePirateBay");
-
+TorrentSearchApi.enableProvider("1337x");
 const traerLinks = async (nombre, type) => {
   if (type === "series") {
     type = "TV";
@@ -14,7 +14,7 @@ const traerLinks = async (nombre, type) => {
     type = "Movies";
   }
 
-  const torrents = await TorrentSearchApi.search(nombre, type, 10);
+  const torrents = await TorrentSearchApi.search(nombre, type, 40);
 
   return torrents;
 };
