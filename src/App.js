@@ -34,3 +34,15 @@ function App() {
 }
 
 export default App;
+
+// Errores a corregir:
+
+// Imagen pelicula en alt en el Home.
+
+// ruta con id, que se pueda entrar mediante la ruta.
+
+// Mejorar disenio de tabla Torrent
+
+// Hacer paginacion para la tabla ?
+
+// Completar Tutorial
