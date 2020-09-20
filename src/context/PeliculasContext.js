@@ -8,7 +8,6 @@ const PeliculasProvider = (props) => {
   const [seleccion, setSeleccion] = useState({});
   const [info, setInfo] = useState(null);
   const [error, setError] = useState(false);
-  const [torrent, setTorrent] = useState(null);
   const [consulta, setConsulta] = useState({
     Mail: "",
     Consulta: "",
@@ -18,20 +17,17 @@ const PeliculasProvider = (props) => {
   useEffect(() => {
     const pedidoDatos = async () => {
       const url = `http://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
-      const url2 = `https://yts.mx/api/v2/list_movies.json?query_term=${seleccion.imdbID}`;
+      const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${busqueda.nombre}`;
       const [info, torrent] = await Promise.all([
         fetch(url).then((value) => value.json()),
         fetch(url2).then((value) => value.json()),
       ]);
 
       setInfo(info);
-      if (torrent.data.movies === undefined) {
-        setTorrent(null);
-      } else {
-        setTorrent(torrent.data.movies[0]);
-      }
+      setBusqTorrent(torrent);
     };
     pedidoDatos();
+    // eslint-disable-next-line
   }, [seleccion]);
   return (
     <PeliculasContext.Provider
@@ -41,7 +37,6 @@ const PeliculasProvider = (props) => {
         error,
         seleccion,
         peliculas,
-        torrent,
         consulta,
         enviado,
         busqTorrent,
@@ -51,7 +46,6 @@ const PeliculasProvider = (props) => {
         setInfo,
         setBusqTorrent,
         setError,
-        setTorrent,
         setConsulta,
         setEnviado,
       }}
