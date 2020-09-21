@@ -9,6 +9,15 @@ import flechita from "./../images/flechaatras.svg";
 import styled from "@emotion/styled";
 import TablaTorrent from "./TablaTorrent";
 import { v4 as uuidv4 } from "uuid";
+const Titulo = styled.strong`
+  font-size: 1.5rem;
+`;
+const Premios = styled.h6`
+  background-color: #efe3a4;
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  padding: 1rem;
+`;
 const ImagenPelicula = styled.div`
   display: flex;
   justify-content: center;
@@ -42,25 +51,36 @@ const Idpelicula = () => {
               </ImagenPelicula>
             </Col>
             <Col>
-              <h1>{info.Title}</h1>
-              <h3>Año: {info.Year}</h3>
-              <h3> Duracion : {info.Runtime}</h3>
-              <h3>Genero: {info.Genre}</h3>
-              <h4>Actores principales : {info.Actors}</h4>
-              <h4>Premios : {info.Awards}</h4>
-              {/* #EFE3A4 */}
-              <h5>Director: {info.Director}</h5>
-              <h5>Escritor: {info.Writer}</h5>
+              <h1>
+                {info.Title} ({info.Year})
+              </h1>
+              <p>
+                {info.Runtime} | {info.Genre}
+              </p>
+              <hr />
               <p>{info.Plot}</p>
               <p>
-                Ratings:
+                <Titulo>Director</Titulo>
+                <p>{info.Director}</p>
+              </p>
+              <p>
+                <Titulo>Escritor</Titulo> <p>{info.Writer}</p>
+              </p>
+              <p>
+                <Titulo>Actores principales</Titulo> <p>{info.Actors}</p>
+              </p>
+              <Premios>Premios : {info.Awards}</Premios>
+              {/* #EFE3A4 */}
+
+              <h5>Ratings:</h5>
+              <div>
                 {info.Ratings.map((rating) => (
                   <p key={uuidv4()}>
-                    {rating.Source}: {rating.Value}
+                    {rating.Source}: <span>{rating.Value}</span>
                   </p>
                 ))}
-              </p>
-              <p>iMdB Rating: {info.imdbRating}</p>
+              </div>
+              <hr />
               <p>BoxOffice: {info.BoxOffice}</p>
               <p>Produccion: {info.Production}</p>
               <Link to="/">
