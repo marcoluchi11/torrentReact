@@ -16,7 +16,7 @@ const PeliculasProvider = (props) => {
   const [enviado, setEnviado] = useState(false);
   useEffect(() => {
     const pedidoDatos = async () => {
-      const url = `http://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
+      const url = `https://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
       const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${busqueda.nombre}?type=${seleccion.Type}`;
       const [info, torrent] = await Promise.all([
         fetch(url).then((value) => value.json()),
