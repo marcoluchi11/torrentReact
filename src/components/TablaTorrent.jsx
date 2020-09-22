@@ -2,7 +2,6 @@ import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
 
 import PaginacionTabla from "./PaginacionTabla";
-import Table from "react-bootstrap/Table";
 import Error from "./Error";
 import { v4 as uuidv4 } from "uuid";
 const TablaTorrent = () => {
