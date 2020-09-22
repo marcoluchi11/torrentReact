@@ -13,7 +13,9 @@ const Tutorial = () => {
         estan en Links de Utilidad
       </p>
       <h3>Paso 3</h3>
-      <p>Buscar pelicula y seleccionar la calidad (720p o 1080p) </p>
+      <p>
+        Buscar pelicula y seleccionar la calidad (720p o 1080p en lo posible){" "}
+      </p>
       <h3>Paso 4</h3>
       <p>
         Se va a descargar un archivo, ese archivo lo abris con el qBittorrent,
