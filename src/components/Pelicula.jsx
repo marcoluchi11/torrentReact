@@ -25,7 +25,7 @@ const Pelicula = () => {
     }
     setError(false);
     const buscarPeliculas = async () => {
-      const url = `http://www.omdbapi.com/?s=${busqueda.nombre}&apikey=${process.env.REACT_APP_SECRET_KEY}`;
+      const url = `https://www.omdbapi.com/?s=${busqueda.nombre}&apikey=${process.env.REACT_APP_SECRET_KEY}`;
 
       const search = await fetch(url);
       const response = await search.json();
