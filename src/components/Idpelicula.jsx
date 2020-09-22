@@ -14,8 +14,8 @@ const Titulo = styled.strong`
 `;
 const Premios = styled.h6`
   background-color: #efe3a4;
-  border-top: 1px grey solid;
-  border-bottom: 1px grey solid;
+  border-top: 1.3px grey solid;
+  border-bottom: 1.3px grey solid;
   padding: 1rem;
 `;
 const ImagenPelicula = styled.div`
@@ -31,7 +31,6 @@ const Idpelicula = () => {
     setBusqTorrent,
     setBusqueda,
   } = useContext(PeliculasContext);
-  //const { Title, Poster, Year, Director, Plot, Runtime, Metascore } = info;
   const handleClick = () => {
     setSeleccion({});
     setInfo(null);
@@ -59,19 +58,11 @@ const Idpelicula = () => {
               </p>
               <hr />
               <p>{info.Plot}</p>
-              <p>
-                <Titulo>Director</Titulo>
-                <p>{info.Director}</p>
-              </p>
-              <p>
-                <Titulo>Escritor</Titulo> <p>{info.Writer}</p>
-              </p>
-              <p>
-                <Titulo>Actores principales</Titulo> <p>{info.Actors}</p>
-              </p>
+              <Titulo>Director</Titulo>
+              <p>{info.Director}</p>
+              <Titulo>Escritor</Titulo> <p>{info.Writer}</p>
+              <Titulo>Actores principales</Titulo> <p>{info.Actors}</p>
               <Premios>Premios : {info.Awards}</Premios>
-              {/* #EFE3A4 */}
-
               <h5>Ratings:</h5>
               <div>
                 {info.Ratings.map((rating) => (
@@ -81,8 +72,8 @@ const Idpelicula = () => {
                 ))}
               </div>
               <hr />
-              <p>BoxOffice: {info.BoxOffice}</p>
-              <p>Produccion: {info.Production}</p>
+              <Titulo>BoxOffice</Titulo> <p>{info.BoxOffice}</p>
+              <Titulo>Produccion</Titulo> <p>{info.Production}</p>
               <Link to="/">
                 <Button variant="secondary" onClick={handleClick} block>
                   <img className="mr-2" src={flechita} alt="" />
