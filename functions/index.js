@@ -5,8 +5,9 @@ const TorrentSearchApi = require("torrent-search-api");
 const app = express();
 app.use(cors());
 TorrentSearchApi.enableProvider("Yts");
-TorrentSearchApi.enableProvider("ThePirateBay");
+
 TorrentSearchApi.enableProvider("1337x");
+TorrentSearchApi.enableProvider("ThePirateBay");
 const traerLinks = async (nombre, type) => {
   if (type === "series") {
     type = "TV";
@@ -14,8 +15,10 @@ const traerLinks = async (nombre, type) => {
     type = "Movies";
   }
 
-  const torrents = await TorrentSearchApi.search(nombre, type, 40);
-
+  let torrents = await TorrentSearchApi.search(nombre, type, 100);
+  if (torrents.length === 0) {
+    torrents = { response: false };
+  }
   return torrents;
 };
 app.get("/", (req, res) => {
