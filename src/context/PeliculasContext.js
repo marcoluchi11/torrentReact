@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-
 export const PeliculasContext = createContext();
 
 const PeliculasProvider = (props) => {
@@ -17,17 +16,19 @@ const PeliculasProvider = (props) => {
   useEffect(() => {
     const pedidoDatos = async () => {
       const url = `https://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
-      const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${busqueda.nombre}?type=${seleccion.Type}`;
-      const [info, torrent] = await Promise.all([
-        fetch(url).then((value) => value.json()),
-        fetch(url2).then((value) => value.json()),
-      ]);
+      const rta = await fetch(url);
+      const data = await rta.json();
 
-      setInfo(info);
-      setBusqTorrent(torrent);
+      setInfo(data);
+      setBusqueda({ nombre: data.Title });
+      const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${data.Title}?type=${data.Type}`;
+
+      const rta2 = await fetch(url2);
+      const data2 = await rta2.json();
+
+      setBusqTorrent(data2);
     };
     pedidoDatos();
-    // eslint-disable-next-line
   }, [seleccion]);
   return (
     <PeliculasContext.Provider
