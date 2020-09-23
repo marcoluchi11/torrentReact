@@ -8,6 +8,7 @@ import Loading from "./Loading";
 import flechita from "./../images/flechaatras.svg";
 import styled from "@emotion/styled";
 import TablaTorrent from "./TablaTorrent";
+import GetId from "./GetId";
 import { v4 as uuidv4 } from "uuid";
 const Titulo = styled.strong`
   font-size: 1.5rem;
@@ -40,7 +41,10 @@ const Idpelicula = () => {
   return (
     <Fragment>
       {info === null ? (
-        <Loading />
+        <Fragment>
+          <Loading />
+          <GetId />
+        </Fragment>
       ) : (
         <Fragment>
           <Row>
@@ -83,7 +87,9 @@ const Idpelicula = () => {
             </Col>
           </Row>
           <Row>
-            <TablaTorrent />
+            <Col>
+              <TablaTorrent />
+            </Col>
           </Row>
         </Fragment>
       )}
