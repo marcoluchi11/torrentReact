@@ -11,6 +11,7 @@ import Contacto from "./components/Contacto";
 import Links from "./components/Links";
 import Tutorial from "./components/Tutorial";
 import Footer from "./components/Footer";
+import GetId from "./components/GetId";
 function App() {
   return (
     <Router>
@@ -23,7 +24,12 @@ function App() {
               <Route exact path="/contacto" component={Contacto} />
               <Route exact path="/links" component={Links} />
               <Route exact path="/tutorial" component={Tutorial} />
-              <Route exact path="/:id" component={Idpelicula} />
+              <Route
+                exact
+                path="/:id"
+                component={Idpelicula}
+                Children={<GetId />}
+              />
             </Switch>
           </Jumbotron>
           <Footer />
@@ -40,9 +46,5 @@ export default App;
 // Imagen pelicula en alt en el Home.
 
 // ruta con id, que se pueda entrar mediante la ruta.
-
-// Mejorar disenio de tabla Torrent
-
-// Hacer paginacion para la tabla ?
 
 // Completar Tutorial
