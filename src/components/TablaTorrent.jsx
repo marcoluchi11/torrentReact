@@ -1,11 +1,11 @@
 import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
-
-import PaginacionTabla from "./PaginacionTabla";
 import Error from "./Error";
+import PaginacionTabla from "./PaginacionTabla";
+import Loading from "./Loading";
 import { v4 as uuidv4 } from "uuid";
 const TablaTorrent = () => {
-  const { busqTorrent, setError, error } = useContext(PeliculasContext);
+  const { busqTorrent } = useContext(PeliculasContext);
 
   const valores = busqTorrent.map((opcion) => (
     <tr key={uuidv4()}>
@@ -17,17 +17,14 @@ const TablaTorrent = () => {
       <td>{opcion.size}</td>
     </tr>
   ));
-  if (valores.length === 0) {
-    setError(true);
-  } else {
-    setError(false);
-  }
   return (
     <Fragment>
-      {error ? (
-        <Error mensaje="No se encontraron Torrents" />
+      {valores.length === 0 ? (
+        <div className="mt-3  d-flex justify-content-center">
+          <Loading />
+        </div>
       ) : (
-        <table className="mt-3">
+        <table>
           <thead>
             <tr>
               <th>Titulo</th>
