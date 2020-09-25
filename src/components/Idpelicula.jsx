@@ -12,17 +12,21 @@ import GetId from "./GetId";
 import { v4 as uuidv4 } from "uuid";
 const Titulo = styled.strong`
   font-size: 1.5rem;
+  color: #fff;
 `;
 const Premios = styled.h6`
+  color: black;
   background-color: #efe3a4;
   border-top: 1.3px grey solid;
   border-bottom: 1.3px grey solid;
   padding: 1rem;
+  border-radius: 15px;
 `;
 const ImagenPelicula = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  border-right: 3px solid black;
 `;
 const Idpelicula = () => {
   const {
