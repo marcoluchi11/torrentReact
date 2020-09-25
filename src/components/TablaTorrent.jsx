@@ -1,8 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
-import Error from "./Error";
 import PaginacionTabla from "./PaginacionTabla";
-import Loading from "./Loading";
+import SpinnerTorrent from "./SpinnerTorrent";
 import { v4 as uuidv4 } from "uuid";
 const TablaTorrent = () => {
   const { busqTorrent } = useContext(PeliculasContext);
@@ -10,18 +9,20 @@ const TablaTorrent = () => {
   const valores = busqTorrent.map((opcion) => (
     <tr key={uuidv4()}>
       <td>
-        <a href={opcion.magnet || opcion.link || opcion.desc}>{opcion.title}</a>
+        <a href={opcion.magnet || opcion.link || opcion.desc}>
+          {opcion.title || "No se encontraron Torrents..."}
+        </a>
       </td>
-      <td>{opcion.seeds}</td>
+      <td>{opcion.seeds || "-"}</td>
       <td>{opcion.peers || "-"}</td>
-      <td>{opcion.size}</td>
+      <td>{opcion.size || "-"}</td>
     </tr>
   ));
   return (
     <Fragment>
       {valores.length === 0 ? (
         <div className="mt-3  d-flex justify-content-center">
-          <Loading />
+          <SpinnerTorrent />
         </div>
       ) : (
         <table>
