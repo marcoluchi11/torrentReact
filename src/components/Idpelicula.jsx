@@ -53,7 +53,7 @@ const Idpelicula = () => {
                 <img src={info.Poster} alt="" />
               </ImagenPelicula>
             </Col>
-            <Col>
+            <Col className="mb-4">
               <h1>
                 {info.Title} ({info.Year})
               </h1>
@@ -76,8 +76,6 @@ const Idpelicula = () => {
                 ))}
               </div>
               <hr />
-              <Titulo>BoxOffice</Titulo> <p>{info.BoxOffice}</p>
-              <Titulo>Produccion</Titulo> <p>{info.Production}</p>
               <Link to="/">
                 <Button variant="secondary" onClick={handleClick} block>
                   <img className="mr-2" src={flechita} alt="" />
