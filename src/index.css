@@ -1,8 +1,16 @@
 html {
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
-
+h1,
+p,
+h5 {
+  color: #fff;
+}
+table {
+  border: none !important;
+}
 body {
   background: linear-gradient(
       to bottom,
@@ -17,15 +25,6 @@ body {
 
   margin: 0 0 100px;
   font-family: "Roboto", sans-serif !important;
-}
-
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  display: auto !important;
 }
 
 .links {
@@ -44,6 +43,7 @@ a.button {
   text-decoration: none;
   color: initial;
 }
+
 .nav {
   height: 100% !important;
 }
@@ -58,17 +58,17 @@ a.button {
 p:first-child span {
   background-color: #f5de50;
   padding: 0.5rem;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 p:nth-child(2) span {
   background-color: #ff0000;
   padding: 0.5rem;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 p:nth-child(3) span {
   background-color: #8f8f8f;
   padding: 0.5rem;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 table {
   width: 100%;
