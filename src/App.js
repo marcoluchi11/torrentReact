@@ -17,7 +17,7 @@ function App() {
     <Router>
       <PeliculasProvider>
         <Navegacion />
-        <Container className="altura mt-5">
+        <Container className="mt-3">
           <Jumbotron className="col-12">
             <Switch>
               <Route exact path="/" component={Pelicula} />
