@@ -41,7 +41,7 @@ const Pelicula = () => {
   return (
     <section>
       <Form>
-        <InputGroup onChange={handleChange} size="sm" className="mb-3">
+        <InputGroup onChange={handleChange} size="sm" className="mb-2 pb-3">
           <InputGroup.Prepend></InputGroup.Prepend>
           <FormControl
             name="nombre"
