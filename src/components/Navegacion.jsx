@@ -5,13 +5,7 @@ import { Link } from "react-router-dom";
 import DescargaImg from "./../images/descarga.svg";
 const Navegacion = () => {
   return (
-    <Navbar
-      className="nav"
-      collapseOnSelect
-      expand="lg"
-      bg="dark"
-      variant="dark"
-    >
+    <Navbar className="nav" collapseOnSelect expand="lg">
       <Link to="/" className="links letra">
         TorrentGuia
       </Link>
