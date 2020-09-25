@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import PeliculasProvider from "./context/PeliculasContext";
 import Pelicula from "./components/Pelicula";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -12,28 +10,32 @@ import Links from "./components/Links";
 import Tutorial from "./components/Tutorial";
 import Footer from "./components/Footer";
 import GetId from "./components/GetId";
+import styled from "@emotion/styled";
+
+const Contenedor = styled.div`
+  min-height: calc(100vh - 70px);
+  overflow-x: hidden;
+`;
 function App() {
   return (
     <Router>
       <PeliculasProvider>
         <Navegacion />
-        <Container className="mt-3">
-          <Jumbotron className="col-12">
-            <Switch>
-              <Route exact path="/" component={Pelicula} />
-              <Route exact path="/contacto" component={Contacto} />
-              <Route exact path="/links" component={Links} />
-              <Route exact path="/tutorial" component={Tutorial} />
-              <Route
-                exact
-                path="/:id"
-                component={Idpelicula}
-                Children={<GetId />}
-              />
-            </Switch>
-          </Jumbotron>
-          <Footer />
-        </Container>
+        <Contenedor className=" container mt-5 pt-5">
+          <Switch>
+            <Route exact path="/" component={Pelicula} />
+            <Route exact path="/contacto" component={Contacto} />
+            <Route exact path="/links" component={Links} />
+            <Route exact path="/tutorial" component={Tutorial} />
+            <Route
+              exact
+              path="/:id"
+              component={Idpelicula}
+              Children={<GetId />}
+            />
+          </Switch>
+        </Contenedor>
+        <Footer />
       </PeliculasProvider>
     </Router>
   );

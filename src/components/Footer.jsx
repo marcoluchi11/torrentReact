@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Pie = styled.footer`
   display: flex;
   justify-content: center;
-  height: 40px;
+  height: 50px;
 
   p {
     margin-bottom: 0;
@@ -14,7 +14,7 @@ const Pie = styled.footer`
 `;
 const Footer = () => {
   return (
-    <Pie className="row">
+    <Pie className="row mt-3">
       <a
         href="https://cafecito.app/marcoluchi11"
         rel="noopener noreferrer"
