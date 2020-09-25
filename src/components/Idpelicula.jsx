@@ -20,13 +20,15 @@ const Premios = styled.h6`
   border-top: 1.3px grey solid;
   border-bottom: 1.3px grey solid;
   padding: 1rem;
-  border-radius: 15px;
 `;
 const ImagenPelicula = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
   border-right: 3px solid black;
+`;
+const Imagen = styled.img`
+  border-radius: 25px;
 `;
 const Idpelicula = () => {
   const {
@@ -46,7 +48,7 @@ const Idpelicula = () => {
     <Fragment>
       {info === null ? (
         <Fragment>
-          <Loading />
+          <Loading mensaje="Buscando informacion..." />
           <GetId />
         </Fragment>
       ) : (
@@ -54,7 +56,7 @@ const Idpelicula = () => {
           <Row>
             <Col>
               <ImagenPelicula>
-                <img src={info.Poster} alt="" />
+                <Imagen src={info.Poster} alt="" />
               </ImagenPelicula>
             </Col>
             <Col className="mb-4">
