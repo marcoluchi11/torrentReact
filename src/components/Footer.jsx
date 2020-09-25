@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 const Pie = styled.footer`
-  background-color: #354b60;
-
   display: flex;
   justify-content: center;
   height: 40px;
@@ -28,7 +26,6 @@ const Footer = () => {
           alt="Invitame un café en cafecito.app"
         />
       </a>
-      <p>&copy;2020</p>
     </Pie>
   );
 };
