@@ -7,7 +7,13 @@ import Button from "react-bootstrap/Button";
 import ListaPelicula from "./ListaPelicula";
 import Busquedaimg from "./../images/busqueda.svg";
 import Error from "./Error";
+import styled from "@emotion/styled";
 
+const ContenedorImagenes = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+`;
 const Pelicula = () => {
   const { busqueda, setBusqueda, setPeliculas, error, setError } = useContext(
     PeliculasContext
@@ -56,7 +62,7 @@ const Pelicula = () => {
         <Button
           type="submit"
           onClick={handleClick}
-          variant="secondary"
+          variant="primary"
           size="lg"
           block
         >
@@ -64,7 +70,9 @@ const Pelicula = () => {
           <img src={Busquedaimg} className="ml-2" alt="" />
         </Button>
       </Form>
-      <ListaPelicula />
+      <ContenedorImagenes>
+        <ListaPelicula />
+      </ContenedorImagenes>
     </section>
   );
 };
