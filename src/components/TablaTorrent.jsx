@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import { PeliculasContext } from "../context/PeliculasContext";
 import PaginacionTabla from "./PaginacionTabla";
-import SpinnerTorrent from "./SpinnerTorrent";
+import Loading from "./Loading";
 import { v4 as uuidv4 } from "uuid";
 const TablaTorrent = () => {
   const { busqTorrent } = useContext(PeliculasContext);
@@ -22,7 +22,7 @@ const TablaTorrent = () => {
     <Fragment>
       {valores.length === 0 ? (
         <div className="mt-3  d-flex justify-content-center">
-          <SpinnerTorrent />
+          <Loading mensaje="Buscando torrents..." />
         </div>
       ) : (
         <table>
