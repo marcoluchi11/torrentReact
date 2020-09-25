@@ -17,7 +17,7 @@ const traerLinks = async (nombre, type) => {
 
   let torrents = await TorrentSearchApi.search(nombre, type, 100);
   if (torrents.length === 0) {
-    torrents = { response: false };
+    torrents = [{ response: false }];
   }
   return torrents;
 };
