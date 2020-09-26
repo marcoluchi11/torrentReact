@@ -45,8 +45,8 @@ export default App;
 
 // Errores a corregir:
 
+// Traer links desde la api de YIFY para descargar o magnet
+//Mejorar disenio mobile
 // Imagen pelicula en alt en el Home.
-
-// ruta con id, que se pueda entrar mediante la ruta.
 
 // Completar Tutorial
