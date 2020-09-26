@@ -25,10 +25,13 @@ const ImagenPelicula = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border-right: 3px solid black;
 `;
 const Imagen = styled.img`
   border-radius: 25px;
+`;
+const Barra = styled.hr`
+  border: 3px solid #fff;
+  border-radius: 5px;
 `;
 const Idpelicula = () => {
   const {
@@ -66,7 +69,7 @@ const Idpelicula = () => {
               <p>
                 {info.Runtime} | {info.Genre}
               </p>
-              <hr />
+              <Barra />
               <p>{info.Plot}</p>
               <Titulo>Director</Titulo>
               <p>{info.Director}</p>
@@ -81,7 +84,7 @@ const Idpelicula = () => {
                   </p>
                 ))}
               </div>
-              <hr />
+              <Barra />
               <Link to="/">
                 <Button variant="secondary" onClick={handleClick} block>
                   <img className="mr-2" src={flechita} alt="" />

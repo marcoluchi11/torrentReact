@@ -48,7 +48,7 @@ const Contacto = () => {
         inconveniente, no dudes en hacermelo saber
       </p>
       <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Email</Form.Label>
+        <Form.Label className="letraContacto">Email</Form.Label>
         <Form.Control
           value={Mail}
           onChange={handleChange}
@@ -59,7 +59,7 @@ const Contacto = () => {
       </Form.Group>
       {error ? <Error mensaje="Ingrese un valor correcto" /> : null}
       <Form.Group controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Consulta</Form.Label>
+        <Form.Label className="letraContacto">Consulta</Form.Label>
         <Form.Control
           value={Consulta}
           onChange={handleChange}
