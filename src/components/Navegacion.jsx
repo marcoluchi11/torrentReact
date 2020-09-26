@@ -9,7 +9,10 @@ const Navegacion = () => {
       <Link to="/" className="links letra">
         TorrentGuia
       </Link>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Toggle
+        className="Btn-Blue-BG"
+        aria-controls="responsive-navbar-nav"
+      />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <img src={DescargaImg} alt="Descargalogo" />
