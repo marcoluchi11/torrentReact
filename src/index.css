@@ -5,8 +5,18 @@ html {
 }
 h1,
 p,
-h5 {
+h5,
+h3,
+h4,
+td {
   color: #fff;
+}
+.letraContacto {
+  color: #fff;
+}
+td a {
+  color: #fff;
+  text-decoration: underline;
 }
 table {
   border: none !important;
@@ -122,6 +132,7 @@ th {
     padding-right: 10px;
     white-space: nowrap;
   }
+
   td:nth-of-type(1) {
     overflow: hidden;
   }
@@ -133,5 +144,8 @@ th {
   }
   td:nth-of-type(4):before {
     content: "Tamaño";
+  }
+  table tbody:last-child td:after {
+    content: none;
   }
 }
