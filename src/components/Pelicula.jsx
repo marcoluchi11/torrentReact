@@ -8,7 +8,8 @@ import ListaPelicula from "./ListaPelicula";
 import Busquedaimg from "./../images/busqueda.svg";
 import Error from "./Error";
 import styled from "@emotion/styled";
-
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 const ContenedorImagenes = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -46,6 +47,18 @@ const Pelicula = () => {
   };
   return (
     <section>
+      <Row className="mb-5">
+        <Col>
+          <h1>Logo</h1>
+        </Col>
+        <Col>
+          <h4>
+            No esta en Netflix? <br /> <br /> Buscala aca y descargala por tu
+            cuenta!
+          </h4>
+        </Col>
+      </Row>
+
       <Form>
         <InputGroup onChange={handleChange} size="sm" className="mb-2 pb-3">
           <InputGroup.Prepend></InputGroup.Prepend>
