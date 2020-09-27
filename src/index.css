@@ -41,7 +41,7 @@ body {
   padding-right: 2rem !important;
   color: #ffffff;
 }
-a:hover {
+a#navegacion:hover {
   color: grey !important;
   text-decoration: none !important;
 }
