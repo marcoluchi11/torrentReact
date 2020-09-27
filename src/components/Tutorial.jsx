@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Contenedor = styled.div`
-  background-color: #686868;
-  -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
-  border-radius: 10px;
-  padding: 1.6rem;
-`;
 const PasosTitulo = styled.h1`
   font-weight: 300;
   text-decoration: underline;
@@ -17,13 +9,21 @@ const PasosTitulo = styled.h1`
 const Parrafo = styled.p`
   font-weight: 300;
 `;
-
+const ContenedorSecciones = styled.div`
+  background-color: #686868;
+  -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 1.6rem;
+  opacity: 0.9;
+`;
 const Linkovich = styled.a`
   text-transform: underline !important;
 `;
 const Tutorial = () => {
   return (
-    <Contenedor>
+    <ContenedorSecciones>
       <h1>Como Descargar</h1>
       <PasosTitulo>Paso 1</PasosTitulo>
       <p>Descargar el cliente de Torrent</p>
@@ -66,7 +66,7 @@ const Tutorial = () => {
         <br />
         Buscar que la sincronizacion de los textos sea buena.
       </Parrafo>
-    </Contenedor>
+    </ContenedorSecciones>
   );
 };
 
