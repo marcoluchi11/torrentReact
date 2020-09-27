@@ -13,13 +13,13 @@ const Navegacion = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <img src={DescargaImg} alt="Descargalogo" />
-          <Link to="/tutorial" className="links letralinks">
+          <Link to="/tutorial" id="navegacion" className="links letralinks">
             Como Descargar
           </Link>
-          <Link to="/links" className="links letralinks">
+          <Link to="/links" id="navegacion" className="links letralinks">
             Links de Utilidad
           </Link>
-          <Link to="/contacto" className="links letralinks">
+          <Link to="/contacto" id="navegacion" className="links letralinks">
             Contacto
           </Link>
         </Nav>
