@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Pie = styled.footer`
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: 30px;
 
   p {
     margin-bottom: 0;
