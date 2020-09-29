@@ -8,14 +8,8 @@ TorrentSearchApi.enableProvider("Yts");
 
 TorrentSearchApi.enableProvider("1337x");
 TorrentSearchApi.enableProvider("ThePirateBay");
-const traerLinks = async (nombre, type) => {
-  if (type === "series") {
-    type = "TV";
-  } else {
-    type = "Movies";
-  }
-
-  let torrents = await TorrentSearchApi.search(nombre, type, 100);
+const traerLinks = async (nombre) => {
+  let torrents = await TorrentSearchApi.search(nombre, "All", 200);
   if (torrents.length === 0) {
     torrents = [{ response: false }];
   }
@@ -25,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("La aplicacion anda");
 });
 app.get("/torrent/:nombre", (req, res) => {
-  traerLinks(req.params.nombre, req.query.type)
+  traerLinks(req.params.nombre)
     .then((result) => res.json(result))
     .catch((err) => console.log("Hubo un error al realizar el pedido", err));
 });
