@@ -30,7 +30,7 @@ const Aclaracion = styled.small`
 `;
 const Links = () => {
   return (
-    <ContenedorSecciones className="row ">
+    <ContenedorSecciones className="row">
       <Col md={12}>
         <Titulo>Links de Utilidad</Titulo>
       </Col>
