@@ -21,8 +21,7 @@ const PeliculasProvider = (props) => {
 
       setInfo(data);
       setBusqueda({ nombre: data.Title });
-      const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${data.Title}?type=${data.Type}`;
-
+      const url2 = `https://us-central1-buscatutorrent.cloudfunctions.net/app/torrent/${data.Title}`;
       const rta2 = await fetch(url2);
       const data2 = await rta2.json();
 
