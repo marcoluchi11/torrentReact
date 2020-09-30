@@ -43,8 +43,11 @@ export default App;
 
 // Errores a corregir:
 
-// Traer links desde la api de YIFY para descargar o magnet
-//Mejorar disenio mobile
 // Imagen pelicula en alt en el Home.
+//LOGO Y PRESENTACION
+
+// Jerarquizar mejor el tutorial
+
+//Agregar algo a la busqueda dep eliculas en las imagenes
 
 // Completar Tutorial
