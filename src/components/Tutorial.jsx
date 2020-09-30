@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 const PasosTitulo = styled.h1`
   font-weight: 500;
-
+  font-size: 2rem;
   padding-bottom: 0.7 rem;
 `;
 const Parrafo = styled.p`
@@ -64,7 +64,6 @@ const Tutorial = () => {
         Descargar el cliente de Torrent y el reproductor de video VLC
       </Parrafo>
       <Parrafo>Existen otros pero yo recomiendo descargar qBittorrent </Parrafo>
-
       <img
         className="mb-2"
         src="https://img.utdstc.com/icons/qbittorrent-windows.png:150"
@@ -81,7 +80,6 @@ const Tutorial = () => {
           Mac OS
         </Linkovich>
       </div>
-
       <Parrafo>Reproductor de video - VLC Media Player</Parrafo>
       <Imagen
         src="https://www.wizcase.com/wp-content/uploads/2020/01/VLC-LOGO.png"
@@ -94,8 +92,8 @@ const Tutorial = () => {
         transmisión.
       </Parrafo>
       <Parrafo>
-        Descargalo desde la
-        <a href="https://www.videolan.org/vlc/index.es.html"> pagina oficial</a>
+        Descargalo desde la{" "}
+        <a href="https://www.videolan.org/vlc/index.es.html">pagina oficial</a>
       </Parrafo>
       <PasosTitulo>Paso 2</PasosTitulo>
       <Parrafo>
@@ -116,11 +114,24 @@ const Tutorial = () => {
         Aqui se pueden hacer dos cosas: <br /> Ir a alguna pagina de subtitulos
         como por ejemplo: <a href="http://www.Subdivx.com"> SubDivx</a>,{" "}
         <a href="http://www.Argenteam.net"> ArgenTeam</a>,{" "}
-        <a href="http://www.Tusubtitulo.com"> TuSubtitulo</a>{" "}
+        <a href="http://www.Tusubtitulo.com">TuSubtitulo</a>
+        {","}
         <a href="http://www.Subtitulamos.tv"> Subtitulos.tv</a> o bien,
         <br /> en el Reproductor VLC hay un apartado que se llama VLSub que
-        busca los subtitulos ahi mismo en el reproductor por idioma.
+        busca los subtitulos en el reproductor mismo por idioma.
       </Parrafo>
+      <Parrafo>
+        Iniciar VLC Reproducir tu vídeo Click on the menu View &gt; VLSub o VLC
+        &gt; Extension &gt; VLSub
+      </Parrafo>
+      <Parrafo>
+        Verifica que el nombre este correcto, y haz click en "search by hash" o
+        "search by name"
+      </Parrafo>
+      <Parrafo>
+        Selecciona los subtítulos de la lista Click en “Download selection”
+      </Parrafo>
+
       <Parrafo>Buscar que la sincronizacion de los textos sea buena.</Parrafo>
     </ContenedorSecciones>
   );
