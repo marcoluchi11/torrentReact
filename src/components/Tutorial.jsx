@@ -1,16 +1,20 @@
 import React from "react";
 import styled from "@emotion/styled";
-
+import { Link } from "react-router-dom";
 const PasosTitulo = styled.h1`
-  font-weight: 300;
-  text-decoration: underline;
+  font-weight: 500;
+
   padding-bottom: 0.7 rem;
 `;
 const Parrafo = styled.p`
   font-weight: 300;
 `;
+const Imagen = styled.img`
+  width: 100px;
+  height: 100px;
+`;
 const ContenedorSecciones = styled.div`
-  background-color: #686868;
+  background-color: #edc79d;
   -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
@@ -24,48 +28,100 @@ const Linkovich = styled.a`
 const Tutorial = () => {
   return (
     <ContenedorSecciones>
-      <h1>Como Descargar</h1>
+      <PasosTitulo>Como Descargar</PasosTitulo>
+      <Parrafo>
+        Antes que nada...Sabes que es un torrent? Un torrent es un pequeño
+        archivo que contiene la informacion de otro archivo
+        (pelicula,serie,recital etc) que queremos descargar.
+      </Parrafo>
+      <Parrafo>
+        El programa que manipula estos archivos utiliza el sistema P2P (peer to
+        peer), que es esto? En lugar de que el contenido se descargue de un
+        servidor central, se descarga de otras computadoras.
+      </Parrafo>
+      <Parrafo>
+        Hay dos terminos importantes: Seeders y Leechers, Los seeders son los
+        que estan compartiendo los archivos en ese momento, y los leechers son
+        los que los estan descargando
+      </Parrafo>
+      <Parrafo>
+        Aqui te dejo un video que lo explica por si no te quedo claro
+      </Parrafo>
+      <div className="embed-responsive embed-responsive-16by9">
+        <iframe
+          className="mt-1 pb-3"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/4wd7pP7VQkg?start=12"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Torrentovich"
+        ></iframe>
+      </div>
       <PasosTitulo>Paso 1</PasosTitulo>
-      <p>Descargar el cliente de Torrent</p>
-      <p>qBittorrent</p>
+      <Parrafo>
+        Descargar el cliente de Torrent y el reproductor de video VLC
+      </Parrafo>
+      <Parrafo>Existen otros pero yo recomiendo descargar qBittorrent </Parrafo>
+
       <img
         className="mb-2"
         src="https://img.utdstc.com/icons/qbittorrent-windows.png:150"
         alt=""
       />
-      <div className="col-12 ">
+      <div className="col-12">
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent_4.2.5_setup.exe">
           32-bit
-        </Linkovich>{" "}
+        </Linkovich>
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent_4.2.5_x64_setup.exe">
           64-bit
-        </Linkovich>{" "}
+        </Linkovich>
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent-4.2.5.dmg">
           Mac OS
         </Linkovich>
       </div>
 
-      <PasosTitulo>Paso 2</PasosTitulo>
-      <Parrafo> Buscar peliculas en la Home Page</Parrafo>
-      <PasosTitulo>Paso 3</PasosTitulo>
-      <Parrafo>
-        Buscar pelicula y seleccionar la calidad (720p o 1080p en lo posible){" "}
+      <Parrafo>Reproductor de video - VLC Media Player</Parrafo>
+      <Imagen
+        src="https://www.wizcase.com/wp-content/uploads/2020/01/VLC-LOGO.png"
+        alt="Logo VLC"
+      />
+      <Parrafo className="mt-3">
+        VLC es un reproductor multimedia libre y de código abierto
+        multiplataforma y un «framework» que reproduce la mayoría de archivos
+        multimedia, así como DVD, Audio CD, VCD y diversos protocolos de
+        transmisión.
       </Parrafo>
+      <Parrafo>
+        Descargalo desde la
+        <a href="https://www.videolan.org/vlc/index.es.html"> pagina oficial</a>
+      </Parrafo>
+      <PasosTitulo>Paso 2</PasosTitulo>
+      <Parrafo>
+        Buscar peliculas en la <Link to="/">HomePage</Link>
+      </Parrafo>
+      <PasosTitulo>Paso 3</PasosTitulo>
+      <Parrafo>Selecciona la pelicula a descargar</Parrafo>
       <PasosTitulo>Paso 4</PasosTitulo>
       <Parrafo>
-        Se va a descargar un archivo, ese archivo lo abris con el qBittorrent,
-        le das ok. Y empezara la descarga.
+        Se mostrara la informacion de la pelicula, y debajo en una tabla, los
+        torrents disponibles para que la descargues.
       </Parrafo>
       <PasosTitulo>Paso 5</PasosTitulo>
       <Parrafo>
-        Luego de descargada la pelicula, faltaria descargar los subtitulos. Aqui
-        se pueden hacer dos cosas: <br /> Ir a alguna pagina de subtitulos como
-        por ejemplo: Subdivx, Argen-team, Tusubtitulo o bien,
+        Luego de descargada la pelicula, quedaria solo descargar los subtitulos.
+      </Parrafo>
+      <Parrafo>
+        Aqui se pueden hacer dos cosas: <br /> Ir a alguna pagina de subtitulos
+        como por ejemplo: <a href="http://www.Subdivx.com"> SubDivx</a>,{" "}
+        <a href="http://www.Argenteam.net"> ArgenTeam</a>,{" "}
+        <a href="http://www.Tusubtitulo.com"> TuSubtitulo</a>{" "}
+        <a href="http://www.Subtitulamos.tv"> Subtitulos.tv</a> o bien,
         <br /> en el Reproductor VLC hay un apartado que se llama VLSub que
         busca los subtitulos ahi mismo en el reproductor por idioma.
-        <br />
-        Buscar que la sincronizacion de los textos sea buena.
       </Parrafo>
+      <Parrafo>Buscar que la sincronizacion de los textos sea buena.</Parrafo>
     </ContenedorSecciones>
   );
 };
