@@ -12,7 +12,15 @@ import GetId from "./GetId";
 import { v4 as uuidv4 } from "uuid";
 const Titulo = styled.strong`
   font-size: 1.5rem;
-  color: #fff;
+`;
+const ContenedorPelicula = styled.div`
+  background-color: #edc79d;
+  -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 1.6rem;
+  opacity: 0.9;
 `;
 const Premios = styled.h6`
   color: black;
@@ -55,7 +63,7 @@ const Idpelicula = () => {
           <GetId />
         </Fragment>
       ) : (
-        <Fragment>
+        <ContenedorPelicula>
           <Row>
             <Col>
               <ImagenPelicula>
@@ -98,7 +106,7 @@ const Idpelicula = () => {
               <TablaTorrent />
             </Col>
           </Row>
-        </Fragment>
+        </ContenedorPelicula>
       )}
     </Fragment>
   );
