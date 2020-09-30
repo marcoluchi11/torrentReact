@@ -49,7 +49,7 @@ const Pelicula = () => {
     <section>
       <Row className="mb-5">
         <Col>
-          <h1>Logo</h1>
+          <h1 id="logo">Logo</h1>
         </Col>
         <Col>
           <h4>
