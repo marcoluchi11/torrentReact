@@ -14,6 +14,8 @@ const Imagen = styled.img`
 `;
 const Paragraph = styled.p`
   color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
   &:hover {
     text-decoration: none;
   }
@@ -48,19 +50,24 @@ const ListaPelicula = () => {
   };
   return (
     <Fragment>
-      {peliculas.map((pelicula) => (
-        <Link key={pelicula.imdbID} to={`/${pelicula.imdbID}`}>
-          <Contenedor className="mt-3">
-            <Imagen
-              src={pelicula.Poster}
-              alt="imagen pelicula"
-              onClick={handleClick}
-            />
-            <Anio>{pelicula.Year}</Anio>
-          </Contenedor>
-          <Paragraph>{pelicula.Title}</Paragraph>
-        </Link>
-      ))}
+      {peliculas.map((pelicula) => {
+        if (pelicula.Poster === "N/A") {
+          return null;
+        }
+        return (
+          <Link key={pelicula.imdbID} to={`/${pelicula.imdbID}`}>
+            <Contenedor className="mt-3">
+              <Imagen
+                src={pelicula.Poster}
+                alt="imagen pelicula"
+                onClick={handleClick}
+              />
+              <Anio>{pelicula.Year}</Anio>
+            </Contenedor>
+            <Paragraph>{pelicula.Title}</Paragraph>
+          </Link>
+        );
+      })}
     </Fragment>
   );
 };
