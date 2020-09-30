@@ -16,9 +16,7 @@ const Navegacion = () => {
           <Link to="/tutorial" id="navegacion" className="links letralinks">
             Como Descargar
           </Link>
-          <Link to="/links" id="navegacion" className="links letralinks">
-            Links de Utilidad
-          </Link>
+
           <Link to="/contacto" id="navegacion" className="links letralinks">
             Contacto
           </Link>
