@@ -25,23 +25,26 @@ const TablaTorrent = () => {
           <Loading mensaje="Buscando torrents..." />
         </div>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Titulo</th>
-              <th>Seeds</th>
-              <th>Leechers</th>
-              <th>Tamaño</th>
-            </tr>
-          </thead>
+        <Fragment>
+          <h3 className="text-center">Lista de Torrents</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Titulo</th>
+                <th>Seeds</th>
+                <th>Leechers</th>
+                <th>Tamaño</th>
+              </tr>
+            </thead>
 
-          <PaginacionTabla
-            itemsperpage={6}
-            nocolumns={5}
-            items={valores}
-            pagesspan={10}
-          />
-        </table>
+            <PaginacionTabla
+              itemsperpage={6}
+              nocolumns={5}
+              items={valores}
+              pagesspan={10}
+            />
+          </table>
+        </Fragment>
       )}
     </Fragment>
   );
