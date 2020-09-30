@@ -7,15 +7,20 @@ h1,
 p,
 h5,
 h3,
-h4,
 td {
+  color: #163b65;
+}
+h4 {
+  color: #fff;
+}
+h1#logo {
   color: #fff;
 }
 .letraContacto {
-  color: #fff;
+  color: #163b65;
 }
 td a {
-  color: #fff;
+  color: #163b65;
   text-decoration: underline;
 }
 table {
