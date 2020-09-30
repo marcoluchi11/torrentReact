@@ -6,8 +6,11 @@ import styled from "@emotion/styled";
 import { enviarFormulario } from "./envioContacto";
 import { PeliculasContext } from "../context/PeliculasContext";
 import MensajeExito from "./MensajeExito";
+const Encabezado = styled.h1`
+  font-weight: 700;
+`;
 const ContenedorSecciones = styled.div`
-  background-color: #686868;
+  background-color: #edc79d;
   -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
@@ -53,7 +56,7 @@ const Contacto = () => {
   return (
     <ContenedorSecciones>
       <Form>
-        <h1>Contacto</h1>
+        <Encabezado>Contacto</Encabezado>
         <p>
           Si se te ocurre una idea para mejorar algo, o algun error o
           inconveniente, no dudes en hacermelo saber
