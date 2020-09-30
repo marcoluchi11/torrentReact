@@ -64,13 +64,15 @@ const Pelicula = () => {
           <InputGroup.Prepend></InputGroup.Prepend>
           <FormControl
             name="nombre"
-            placeholder="Busca tu pelicula..."
+            placeholder="Busca tu pelicula o serie..."
             aria-label="Busca peliculas"
             aria-describedby="inputGroup-sizing-sm"
           />
         </InputGroup>
 
-        {error ? <Error mensaje="No se encontraron peliculas" /> : null}
+        {error ? (
+          <Error mensaje="No se encontraron peliculas ni series en esa busqueda" />
+        ) : null}
 
         <Button
           type="submit"
@@ -79,7 +81,7 @@ const Pelicula = () => {
           size="lg"
           block
         >
-          Buscar Movie
+          Buscar
           <img src={Busquedaimg} className="ml-2" alt="" />
         </Button>
       </Form>
