@@ -14,7 +14,7 @@ const Imagen = styled.img`
   height: 100px;
 `;
 const ContenedorSecciones = styled.div`
-  background-color: #edc79d;
+  background-color: #587c9f;
   -webkit-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 16px -8px rgba(0, 0, 0, 0.75);

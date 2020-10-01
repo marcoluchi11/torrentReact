@@ -8,19 +8,17 @@ p,
 h5,
 h3,
 td {
-  color: #163b65;
+  color: #f6fbfb;
 }
 h4 {
-  color: #fff;
+  color: #f6fbfb;
 }
-h1#logo {
-  color: #fff;
-}
+
 .letraContacto {
-  color: #163b65;
+  color: #f6fbfb;
 }
 td a {
-  color: #163b65;
+  color: #f6fbfb;
   text-decoration: underline;
 }
 table {
