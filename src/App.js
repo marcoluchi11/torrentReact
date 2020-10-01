@@ -20,7 +20,7 @@ function App() {
     <Router>
       <PeliculasProvider>
         <Navegacion />
-        <Contenedor className=" container mt-5 pt-5">
+        <Contenedor className=" container pt-5">
           <Switch>
             <Route exact path="/" component={Pelicula} />
             <Route exact path="/contacto" component={Contacto} />
@@ -43,11 +43,10 @@ export default App;
 
 // Errores a corregir:
 
-// Imagen pelicula en alt en el Home.
 //LOGO Y PRESENTACION
 
 // Jerarquizar mejor el tutorial
 
-//Agregar algo a la busqueda dep eliculas en las imagenes
+// Filtrar palabras porno
 
 // Completar Tutorial
