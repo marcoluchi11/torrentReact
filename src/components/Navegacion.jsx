@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import logo from "./../images/logoahorasi.png";
+import styled from "@emotion/styled";
+const Imagen = styled.img`
+  width: 5rem;
+  height: 3.5rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+`;
+
 const Navegacion = () => {
+  const [nav, setNav] = useState(false);
+
+  const changeBack = () => {
+    if (window.scrollY >= 70) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
+  };
+  window.addEventListener("scroll", changeBack);
   return (
-    <Navbar className="nav" collapseOnSelect expand="lg">
+    <Navbar
+      className={nav ? "nav active" : "nav"}
+      collapseOnSelect
+      expand="lg"
+      sticky="top"
+    >
       <Link to="/" className="links letra">
-        TorrentGuia
+        <Imagen src={logo} alt="" />
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
