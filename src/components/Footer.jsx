@@ -4,13 +4,6 @@ const Pie = styled.footer`
   display: flex;
   justify-content: center;
   height: 30px;
-
-  p {
-    margin-bottom: 0;
-    margin-top: 5px;
-    margin-left: 4px;
-    color: #ffffff;
-  }
 `;
 const Footer = () => {
   return (
