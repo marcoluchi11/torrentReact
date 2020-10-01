@@ -6,11 +6,7 @@ const Imagen = styled.img`
   width: 20rem;
   height: 20rem;
   border-radius: 1rem;
-  /* 
-  @media all and (max-width: 799px) and (min-width: 300px) {
-    width: 20rem;
-    height: 20rem;
-  } */
+  width: 100%;
 `;
 const Paragraph = styled.p`
   color: #fff;
@@ -62,7 +58,9 @@ const ListaPelicula = () => {
                 alt="imagen pelicula"
                 onClick={handleClick}
               />
-              <Anio>{pelicula.Year}</Anio>
+              <div className="text-wrapper">
+                <Anio>{pelicula.Year}</Anio>
+              </div>
             </Contenedor>
             <Paragraph>{pelicula.Title}</Paragraph>
           </Link>
