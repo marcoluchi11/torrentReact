@@ -10,10 +10,31 @@ import Error from "./Error";
 import styled from "@emotion/styled";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import logo from "./../images/logoc3.png";
 const ContenedorImagenes = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+`;
+const Imagen = styled.img`
+  width: 27rem;
+  height: 22rem;
+
+  @media all and (max-width: 799px) and (min-width: 300px) {
+    width: 100%;
+  }
+`;
+const Titulo = styled.h4`
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 3rem;
+`;
+const Subtitulo = styled.h5`
+  color: #fff !important;
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 1.9rem;
+  margin-top: 1.6rem;
 `;
 const Pelicula = () => {
   const { busqueda, setBusqueda, setPeliculas, error, setError } = useContext(
@@ -47,15 +68,13 @@ const Pelicula = () => {
   };
   return (
     <section>
-      <Row className="mb-5">
-        <Col>
-          <h1 id="logo">Logo</h1>
+      <Row className="mb-5 d-flex justify-content-center">
+        <Col md={6} lg={12} className="d-flex justify-content-center">
+          <Imagen src={logo} alt="" />
         </Col>
-        <Col>
-          <h4>
-            No esta en Netflix? <br /> <br /> Buscala aca y descargala por tu
-            cuenta!
-          </h4>
+        <Col md={6} className="text-center">
+          <Titulo>¿No esta en Netflix?</Titulo>
+          <Subtitulo>¡Buscalo facilmente aca!</Subtitulo>
         </Col>
       </Row>
 
