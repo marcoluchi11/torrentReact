@@ -68,7 +68,7 @@ a.button {
   transition: background 0.9s;
 }
 .nav.active {
-  background: black !important;
+  background: #2a2a2a !important;
 }
 .letra {
   font-size: 1.8rem;
