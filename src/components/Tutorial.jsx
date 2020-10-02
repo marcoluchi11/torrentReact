@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-const PasosTitulo = styled.h1`
+const Titulo = styled.h1`
+  font-weight: 700;
+`;
+const PasosTitulo = styled.h2`
   font-weight: 500;
-  font-size: 2rem;
+
   padding-bottom: 0.7 rem;
 `;
 const Parrafo = styled.p`
@@ -23,21 +26,21 @@ const ContenedorSecciones = styled.div`
   opacity: 0.9;
 `;
 const Linkovich = styled.a`
-  text-transform: underline !important;
+  color: #f6fbfb;
 `;
 const Tutorial = () => {
   return (
-    <ContenedorSecciones>
-      <PasosTitulo>Como Descargar</PasosTitulo>
+    <ContenedorSecciones id="tutorial">
+      <Titulo>Como Descargar</Titulo>
       <Parrafo>
-        Antes que nada...Sabes que es un torrent? Un torrent es un pequeño
-        archivo que contiene la informacion de otro archivo
-        (pelicula,serie,recital etc) que queremos descargar.
+        Antes que nada... ¿Sabes que es un torrent? Un torrent es un pequeño
+        archivo que contiene la informacion de otro archivo (pelicula, serie,
+        recital, etc.) que queremos descargar.
       </Parrafo>
       <Parrafo>
         El programa que manipula estos archivos utiliza el sistema P2P (peer to
-        peer), que es esto? En lugar de que el contenido se descargue de un
-        servidor central, se descarga de otras computadoras.
+        peer). ¿que es esto? En lugar de que el contenido se descargue de un
+        servidor central, se descarga desde otras computadoras.
       </Parrafo>
       <Parrafo>
         Hay dos terminos importantes: Seeders y Leechers, Los seeders son los
@@ -50,8 +53,8 @@ const Tutorial = () => {
       <div className="embed-responsive embed-responsive-16by9">
         <iframe
           className="mt-1 pb-3"
-          width="560"
-          height="315"
+          width="460"
+          height="215"
           src="https://www.youtube.com/embed/4wd7pP7VQkg?start=12"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -72,10 +75,10 @@ const Tutorial = () => {
       <div className="col-12">
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent_4.2.5_setup.exe">
           32-bit
-        </Linkovich>
+        </Linkovich>{" "}
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent_4.2.5_x64_setup.exe">
           64-bit
-        </Linkovich>
+        </Linkovich>{" "}
         <Linkovich href="https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent-4.2.5.dmg">
           Mac OS
         </Linkovich>
