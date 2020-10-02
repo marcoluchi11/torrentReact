@@ -28,13 +28,17 @@ const ContenedorSecciones = styled.div`
 const Linkovich = styled.a`
   color: #f6fbfb;
 `;
+const FinDescarga = styled.h4`
+  font-size: 1.4rem;
+  font-weight: 500;
+`;
 const Tutorial = () => {
   return (
     <ContenedorSecciones id="tutorial">
       <Titulo>Como Descargar</Titulo>
       <Parrafo>
         Antes que nada... ¿Sabes que es un torrent? Un torrent es un pequeño
-        archivo que contiene la informacion de otro archivo (pelicula, serie,
+        archivo que contiene la informacion de otro archivo (película, serie,
         recital, etc.) que queremos descargar.
       </Parrafo>
       <Parrafo>
@@ -43,12 +47,12 @@ const Tutorial = () => {
         servidor central, se descarga desde otras computadoras.
       </Parrafo>
       <Parrafo>
-        Hay dos terminos importantes: Seeders y Leechers, Los seeders son los
-        que estan compartiendo los archivos en ese momento, y los leechers son
-        los que los estan descargando
+        Hay dos términos importantes: Seeders y Leechers, Los seeders son los
+        que están compartiendo los archivos en ese momento, y los leechers son
+        los que los están descargando.
       </Parrafo>
       <Parrafo>
-        Aqui te dejo un video que lo explica por si no te quedo claro
+        Aquí te dejo un video que lo explica por si no te quedo claro.
       </Parrafo>
       <div className="embed-responsive embed-responsive-16by9">
         <iframe
@@ -64,9 +68,11 @@ const Tutorial = () => {
       </div>
       <PasosTitulo>Paso 1</PasosTitulo>
       <Parrafo>
-        Descargar el cliente de Torrent y el reproductor de video VLC
+        Descargar el cliente de Torrent y el reproductor de video VLC.
       </Parrafo>
-      <Parrafo>Existen otros pero yo recomiendo descargar qBittorrent </Parrafo>
+      <Parrafo>
+        Existen otros pero yo recomiendo descargar qBittorrent.{" "}
+      </Parrafo>
       <img
         className="mb-2"
         src="https://img.utdstc.com/icons/qbittorrent-windows.png:150"
@@ -98,44 +104,50 @@ const Tutorial = () => {
         Descargalo desde la{" "}
         <a href="https://www.videolan.org/vlc/index.es.html">pagina oficial</a>
       </Parrafo>
+      <FinDescarga>
+        Listo ya tienes todo (o casi) lo necesario para empezar a ver películas
+        o series por tu cuenta.
+      </FinDescarga>
+
       <PasosTitulo>Paso 2</PasosTitulo>
       <Parrafo>
-        Buscar peliculas en la <Link to="/">HomePage</Link>
+        Buscar películas en la <Link to="/">HomePage</Link>
       </Parrafo>
       <PasosTitulo>Paso 3</PasosTitulo>
-      <Parrafo>Selecciona la pelicula a descargar</Parrafo>
+      <Parrafo>Selecciona la película/serie que quieras</Parrafo>
       <PasosTitulo>Paso 4</PasosTitulo>
       <Parrafo>
-        Se mostrara la informacion de la pelicula, y debajo en una tabla, los
-        torrents disponibles para que la descargues.
+        Se mostrará la informacion de la película, y debajo en una tabla, los
+        Torrents disponibles para que hagas la descarga.
       </Parrafo>
       <PasosTitulo>Paso 5</PasosTitulo>
       <Parrafo>
-        Luego de descargada la pelicula, quedaria solo descargar los subtitulos.
+        Luego de descargada la pelÍcula/serie, quedarÍa solo descargar los
+        subtítulos.
       </Parrafo>
       <Parrafo>
-        Aqui se pueden hacer dos cosas: <br /> Ir a alguna pagina de subtitulos
+        Aquí se pueden hacer dos cosas: <br /> Ir a alguna pagina de subtítulos
         como por ejemplo: <a href="http://www.Subdivx.com"> SubDivx</a>,{" "}
         <a href="http://www.Argenteam.net"> ArgenTeam</a>,{" "}
         <a href="http://www.Tusubtitulo.com">TuSubtitulo</a>
         {","}
         <a href="http://www.Subtitulamos.tv"> Subtitulos.tv</a> o bien,
         <br /> en el Reproductor VLC hay un apartado que se llama VLSub que
-        busca los subtitulos en el reproductor mismo por idioma.
+        busca los subtítulos en el reproductor mismo por idioma.
       </Parrafo>
       <Parrafo>
-        Iniciar VLC Reproducir tu vídeo Click on the menu View &gt; VLSub o VLC
-        &gt; Extension &gt; VLSub
+        Iniciar VLC &gt; Reproducir tu vídeo &gt; Haz click en el menu View &gt;
+        VLSub o VLC &gt; VLSub
       </Parrafo>
       <Parrafo>
-        Verifica que el nombre este correcto, y haz click en "search by hash" o
+        Verifica que el nombre esté correcto, y haz click en "search by hash" o
         "search by name"
       </Parrafo>
       <Parrafo>
         Selecciona los subtítulos de la lista Click en “Download selection”
       </Parrafo>
 
-      <Parrafo>Buscar que la sincronizacion de los textos sea buena.</Parrafo>
+      <Parrafo>Buscar que la sincronización de los textos sea buena.</Parrafo>
     </ContenedorSecciones>
   );
 };

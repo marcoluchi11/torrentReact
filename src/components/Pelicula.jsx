@@ -18,7 +18,7 @@ const ContenedorImagenes = styled.div`
 `;
 const Imagen = styled.img`
   width: 25rem;
-  height: 25rem;
+  height: 15rem;
 
   @media all and (max-width: 799px) and (min-width: 300px) {
     width: 100%;
@@ -73,8 +73,8 @@ const Pelicula = () => {
           <Imagen src={logo} alt="Logo Principal" />
         </Col>
         <Col md={6} className="text-center">
-          <Titulo>¿No esta en Netflix?</Titulo>
-          <Subtitulo>¡Buscalo facilmente aca!</Subtitulo>
+          <Titulo>¿No está en Netflix?</Titulo>
+          <Subtitulo>¡Búscalo fácilmente acá!</Subtitulo>
         </Col>
       </Row>
 
