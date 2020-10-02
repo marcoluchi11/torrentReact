@@ -20,7 +20,7 @@ function App() {
     <Router>
       <PeliculasProvider>
         <Navegacion />
-        <Contenedor className=" container pt-5">
+        <Contenedor className=" container pt-2">
           <Switch>
             <Route exact path="/" component={Pelicula} />
             <Route exact path="/contacto" component={Contacto} />
