@@ -83,7 +83,7 @@ const Contacto = () => {
             placeholder="Escribe tu consulta aqui..."
           />
         </Form.Group>
-        <Button className="mb-2" variant="info" onClick={handleClick}>
+        <Button className="mb-2" variant="primary" onClick={handleClick}>
           Enviar
         </Button>
         {enviado ? (
