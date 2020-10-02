@@ -17,8 +17,8 @@ const ContenedorImagenes = styled.div`
   justify-content: space-around;
 `;
 const Imagen = styled.img`
-  width: 27rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
 
   @media all and (max-width: 799px) and (min-width: 300px) {
     width: 100%;
@@ -70,7 +70,7 @@ const Pelicula = () => {
     <section>
       <Row className="mb-5 d-flex justify-content-center">
         <Col md={6} lg={12} className="d-flex justify-content-center">
-          <Imagen src={logo} alt="" />
+          <Imagen src={logo} alt="Logo Principal" />
         </Col>
         <Col md={6} className="text-center">
           <Titulo>¿No esta en Netflix?</Titulo>

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import logo from "./../images/logoahorasi.png";
 import styled from "@emotion/styled";
 const Imagen = styled.img`
-  width: 5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   margin-left: 2rem;
   margin-top: 1rem;
 `;
