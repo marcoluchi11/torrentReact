@@ -95,7 +95,7 @@ const Contacto = () => {
           />
         </Form.Group>
         <Button className="mb-2" variant="primary" onClick={handleClick}>
-          Enviar
+          Enviar consulta
         </Button>
         {enviado ? (
           <MensajeExito mensaje="El mensaje se envio con exito" />
