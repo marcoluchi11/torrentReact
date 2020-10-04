@@ -31,9 +31,13 @@ const Anio = styled.div`
   background-color: #007aff;
 `;
 const ListaPelicula = () => {
-  const { peliculas, setSeleccion, setError, setBusqueda } = useContext(
-    PeliculasContext
-  );
+  const {
+    peliculas,
+    setSeleccion,
+    setError,
+    setBusqueda,
+    setBusqTorrent,
+  } = useContext(PeliculasContext);
 
   const handleClick = (e) => {
     const posicion = peliculas.findIndex(
@@ -41,6 +45,7 @@ const ListaPelicula = () => {
     );
 
     setSeleccion(peliculas[posicion]);
+    setBusqTorrent([]);
     setError(false);
     setBusqueda({ nombre: peliculas[posicion].Title });
   };
