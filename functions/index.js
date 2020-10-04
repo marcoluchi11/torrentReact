@@ -5,8 +5,7 @@ const TorrentSearchApi = require("torrent-search-api");
 const app = express();
 app.use(cors());
 TorrentSearchApi.enableProvider("Yts");
-
-TorrentSearchApi.enableProvider("1337x");
+TorrentSearchApi.enableProvider("Rarbg");
 TorrentSearchApi.enableProvider("ThePirateBay");
 const traerLinks = async (nombre) => {
   let torrents = await TorrentSearchApi.search(nombre, "All", 200);
