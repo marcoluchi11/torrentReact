@@ -22,6 +22,7 @@ const Imagen = styled.img`
 
   @media all and (max-width: 799px) and (min-width: 300px) {
     width: 100%;
+    margin-top: 8rem;
   }
 `;
 const Titulo = styled.h4`

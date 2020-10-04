@@ -33,7 +33,7 @@ const Navegacion = () => {
         <Imagen src={logo} alt="" />
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Collapse id="responsive-navbar-nav" className="mt-3">
         <Nav className="ml-auto">
           <Link to="/tutorial" id="navegacion" className="links letralinks">
             Como Descargar
