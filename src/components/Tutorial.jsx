@@ -137,7 +137,7 @@ const Tutorial = () => {
       </Parrafo>
       <Parrafo>
         Iniciar VLC &gt; Reproducir tu vídeo &gt; Haz click en el menu View &gt;
-        VLSub o VLC &gt; VLSub
+        VLSub &gt;
       </Parrafo>
       <Parrafo>
         Verifica que el nombre esté correcto, y haz click en "search by hash" o
