@@ -40,13 +40,3 @@ function App() {
 }
 
 export default App;
-
-// Errores a corregir:
-
-//LOGO Y PRESENTACION
-
-// Jerarquizar mejor el tutorial
-
-// Filtrar palabras porno
-
-// Completar Tutorial
