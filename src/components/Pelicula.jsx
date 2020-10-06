@@ -91,7 +91,7 @@ const Pelicula = () => {
         </InputGroup>
 
         {error ? (
-          <Error mensaje="No se encontraron peliculas ni series en esa busqueda" />
+          <Error mensaje="No se encontraron películas ni series en esa búsqueda" />
         ) : null}
 
         <Button

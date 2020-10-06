@@ -91,15 +91,13 @@ const Contacto = () => {
             name="Consulta"
             as="textarea"
             rows="3"
-            placeholder="Escribe tu consulta aqui..."
+            placeholder="Escribe tu consulta aquí..."
           />
         </Form.Group>
         <Button className="mb-2" variant="primary" onClick={handleClick}>
           Enviar consulta
         </Button>
-        {enviado ? (
-          <MensajeExito mensaje="El mensaje se envio con exito" />
-        ) : null}
+        {enviado ? <MensajeExito mensaje="Mensaje enviado con éxito" /> : null}
       </Form>
     </ContenedorSecciones>
   );
