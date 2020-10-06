@@ -7,9 +7,7 @@ h1,
 p,
 h2,
 h3,
-td {
-  color: #f6fbfb;
-}
+td,
 h4 {
   color: #f6fbfb;
 }
@@ -45,7 +43,14 @@ body {
   margin: 0 0 100px;
   font-family: "Roboto", sans-serif !important;
 }
-
+@media all and (max-width: 300px) {
+  #logardo {
+    width: 100%;
+    width: 15rem;
+    height: 12rem;
+    margin-top: 5rem;
+  }
+}
 .links {
   padding-right: 2rem !important;
   color: #ffffff;
