@@ -118,7 +118,9 @@ const Tutorial = () => {
       <PasosTitulo>Paso 4</PasosTitulo>
       <Parrafo>
         Se mostrará la informacion de la película, y debajo en una tabla, los
-        Torrents disponibles para que hagas la descarga.
+        Torrents disponibles para que hagas la descarga. Haz click sobre el link
+        que quieras descargar y se te abrira el qBittorrent que previamente has
+        descargado y se iniciará la descarga
       </Parrafo>
       <PasosTitulo>Paso 5</PasosTitulo>
       <Parrafo>

@@ -70,10 +70,10 @@ const Pelicula = () => {
   return (
     <section>
       <Row className="mb-5 d-flex justify-content-center">
-        <Col md={6} lg={12} className="d-flex justify-content-center">
-          <Imagen src={logo} alt="Logo Principal" />
+        <Col sm={6} md={8} lg={12} className="d-flex justify-content-center">
+          <Imagen id="logardo" src={logo} alt="Logo Principal" />
         </Col>
-        <Col md={6} className="text-center">
+        <Col sm={6} md={8} className="text-center ">
           <Titulo>¿No está en Netflix?</Titulo>
           <Subtitulo>¡Búscalo fácilmente acá!</Subtitulo>
         </Col>
