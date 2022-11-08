@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Idpelicula from "./components/Idpelicula";
 import Navegacion from "./components/Navegacion";
 import Contacto from "./components/Contacto";
-import Tutorial from "./components/Tutorial";
 import Footer from "./components/Footer";
 import GetId from "./components/GetId";
 import styled from "@emotion/styled";
@@ -24,7 +23,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={Pelicula} />
             <Route exact path="/contacto" component={Contacto} />
-            <Route exact path="/tutorial" component={Tutorial} />
             <Route
               exact
               path="/:id"
