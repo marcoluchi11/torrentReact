@@ -31,13 +31,8 @@ const Anio = styled.div`
   background-color: #007aff;
 `;
 const ListaPelicula = () => {
-  const {
-    peliculas,
-    setSeleccion,
-    setError,
-    setBusqueda,
-    setBusqTorrent,
-  } = useContext(PeliculasContext);
+  const { peliculas, setSeleccion, setError, setBusqueda, setBusqTorrent } =
+    useContext(PeliculasContext);
 
   const handleClick = (e) => {
     const posicion = peliculas.findIndex(

@@ -22,18 +22,18 @@ const TablaTorrent = () => {
     <Fragment>
       {valores.length === 0 ? (
         <div className="mt-3  d-flex justify-content-center">
-          <Loading mensaje="Buscando torrents..." />
+          <Loading mensaje="Loading torrents..." />
         </div>
       ) : (
         <Fragment>
-          <h3 className="text-center">Lista de Torrents</h3>
+          <h3 className="text-center">Torrent List</h3>
           <table>
             <thead>
               <tr>
-                <th>Titulo</th>
+                <th>Title</th>
                 <th>Seeds</th>
                 <th>Leechers</th>
-                <th>Tamaño</th>
+                <th>Size</th>
               </tr>
             </thead>
 

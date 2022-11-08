@@ -23,7 +23,7 @@ const Footer = () => {
           alt="Invitame un café en cafecito.app"
         />
       </a>
-      <small>&copy; 2022. Todos los derechos reservados.</small>
+      <small>&copy; 2020-2022. All rights reserved.</small>
     </Pie>
   );
 };

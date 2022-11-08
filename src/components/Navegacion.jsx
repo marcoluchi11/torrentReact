@@ -36,7 +36,7 @@ const Navegacion = () => {
       <Navbar.Collapse id="responsive-navbar-nav" className="mt-3">
         <Nav className="ml-auto">
           <Link to="/contacto" id="navegacion" className="links letralinks">
-            Contacto
+            Contact
           </Link>
         </Nav>
       </Navbar.Collapse>

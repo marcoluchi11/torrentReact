@@ -19,14 +19,8 @@ const ContenedorSecciones = styled.div`
   opacity: 0.9;
 `;
 const Contacto = () => {
-  const {
-    consulta,
-    setConsulta,
-    setError,
-    error,
-    enviado,
-    setEnviado,
-  } = useContext(PeliculasContext);
+  const { consulta, setConsulta, setError, error, enviado, setEnviado } =
+    useContext(PeliculasContext);
   const [mensaje, setMensaje] = useState("");
   const { Mail, Consulta } = consulta;
   function isEmail(email) {
@@ -41,12 +35,12 @@ const Contacto = () => {
   const handleClick = (e) => {
     e.preventDefault();
     if (isEmail(Mail) === false) {
-      setMensaje("Ingrese un mail válido");
+      setMensaje("Please write a valid email address");
       setError(true);
       return;
     }
     if (Consulta.trim() === "") {
-      setMensaje("No dejes el campo de consulta vacío");
+      setMensaje("Don't leave empty inputs");
       setError(true);
       return;
     }
@@ -67,10 +61,10 @@ const Contacto = () => {
   return (
     <ContenedorSecciones>
       <Form>
-        <Encabezado>Contacto</Encabezado>
+        <Encabezado>Contact</Encabezado>
         <p>
-          Si se te ocurre una idea para mejorar algo, o algún error o
-          inconveniente, no dudes en hacérmelo saber.
+          If you have an idea or something in mind that could be done better,
+          let me know!
         </p>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label className="letraContacto">Email</Form.Label>
@@ -79,25 +73,25 @@ const Contacto = () => {
             onChange={handleChange}
             name="Mail"
             type="email"
-            placeholder="nombre@ejemplo.com"
+            placeholder="nombre@example.com"
           />
         </Form.Group>
         {error ? <Error mensaje={mensaje} /> : null}
         <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label className="letraContacto">Consulta</Form.Label>
+          <Form.Label className="letraContacto">Message</Form.Label>
           <Form.Control
             value={Consulta}
             onChange={handleChange}
             name="Consulta"
             as="textarea"
             rows="3"
-            placeholder="Escribe tu consulta aquí..."
+            placeholder="Write your message here..."
           />
         </Form.Group>
         <Button className="mb-2" variant="primary" onClick={handleClick}>
-          Enviar consulta
+          Send
         </Button>
-        {enviado ? <MensajeExito mensaje="Mensaje enviado con éxito" /> : null}
+        {enviado ? <MensajeExito mensaje="Message sent successfully" /> : null}
       </Form>
     </ContenedorSecciones>
   );

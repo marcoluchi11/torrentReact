@@ -8,34 +8,11 @@ import ListaPelicula from "./ListaPelicula";
 import Busquedaimg from "./../images/busqueda.svg";
 import Error from "./Error";
 import styled from "@emotion/styled";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import logo from "./../images/logoc3.png";
+import Heading from "./Heading";
 const ContenedorImagenes = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-`;
-const Imagen = styled.img`
-  width: 25rem;
-  height: 15rem;
-
-  @media all and (max-width: 799px) and (min-width: 300px) {
-    width: 100%;
-    margin-top: 8rem;
-  }
-`;
-const Titulo = styled.h4`
-  font-weight: 700;
-  line-height: 120%;
-  font-size: 3rem;
-`;
-const Subtitulo = styled.h5`
-  color: #fff !important;
-  font-weight: 500;
-  line-height: 120%;
-  font-size: 1.9rem;
-  margin-top: 1.6rem;
 `;
 const Pelicula = () => {
   const { busqueda, setBusqueda, setPeliculas, error, setError } =
@@ -68,29 +45,21 @@ const Pelicula = () => {
   };
   return (
     <section>
-      <Row className="mb-5 d-flex justify-content-center">
-        <Col sm={6} md={8} lg={12} className="d-flex justify-content-center">
-          <Imagen id="logardo" src={logo} alt="Logo Principal" />
-        </Col>
-        <Col sm={6} md={8} className="text-center ">
-          <Titulo>¿No está en Netflix?</Titulo>
-          <Subtitulo>¡Búscalo fácilmente acá!</Subtitulo>
-        </Col>
-      </Row>
-
+      <Heading />
       <Form>
         <InputGroup onChange={handleChange} size="sm" className="mb-2 pb-3">
           <InputGroup.Prepend></InputGroup.Prepend>
           <FormControl
             name="nombre"
-            placeholder="Busca tu pelicula o serie..."
+            placeholder="Search your movie or show..."
+            autoComplete="off"
             aria-label="Busca peliculas"
             aria-describedby="inputGroup-sizing-sm"
           />
         </InputGroup>
 
         {error ? (
-          <Error mensaje="No se encontraron películas ni series en esa búsqueda" />
+          <Error mensaje="We found nothing in that search. Try again!" />
         ) : null}
 
         <Button
@@ -100,7 +69,7 @@ const Pelicula = () => {
           size="lg"
           block
         >
-          Buscar
+          Search
           <img src={Busquedaimg} className="ml-2" alt="" />
         </Button>
       </Form>
