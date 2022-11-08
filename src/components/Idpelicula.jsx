@@ -42,13 +42,8 @@ const Barra = styled.hr`
   border-radius: 5px;
 `;
 const Idpelicula = () => {
-  const {
-    setSeleccion,
-    info,
-    setInfo,
-    setBusqTorrent,
-    setBusqueda,
-  } = useContext(PeliculasContext);
+  const { setSeleccion, info, setInfo, setBusqTorrent, setBusqueda } =
+    useContext(PeliculasContext);
   const handleClick = () => {
     setSeleccion({});
     setInfo(null);
@@ -81,9 +76,9 @@ const Idpelicula = () => {
               <p>{info.Plot}</p>
               <Titulo>Director</Titulo>
               <p>{info.Director}</p>
-              <Titulo>Escritor</Titulo> <p>{info.Writer}</p>
-              <Titulo>Actores principales</Titulo> <p>{info.Actors}</p>
-              <Premios>Premios : {info.Awards}</Premios>
+              <Titulo>Writer</Titulo> <p>{info.Writer}</p>
+              <Titulo>Actors</Titulo> <p>{info.Actors}</p>
+              <Premios>Awards : {info.Awards}</Premios>
               <h5>Ratings:</h5>
               <div>
                 {info.Ratings.map((rating) => (
@@ -96,7 +91,7 @@ const Idpelicula = () => {
               <Link to="/">
                 <Button variant="secondary" onClick={handleClick} block>
                   <img className="mr-2" src={flechita} alt="" />
-                  Volver
+                  Back
                 </Button>
               </Link>
             </Col>
