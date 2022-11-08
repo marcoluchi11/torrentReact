@@ -15,7 +15,7 @@ const PeliculasProvider = (props) => {
   const [enviado, setEnviado] = useState(false);
   useEffect(() => {
     const pedidoDatos = async () => {
-      const url = `https://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=89a340b7`;
+      const url = `https://www.omdbapi.com/?i=${seleccion.imdbID}&apikey=${process.env.REACT_APP_SECRET_KEY}`;
       const rta = await fetch(url);
       const data = await rta.json();
 

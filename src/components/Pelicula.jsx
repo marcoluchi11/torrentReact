@@ -38,9 +38,8 @@ const Subtitulo = styled.h5`
   margin-top: 1.6rem;
 `;
 const Pelicula = () => {
-  const { busqueda, setBusqueda, setPeliculas, error, setError } = useContext(
-    PeliculasContext
-  );
+  const { busqueda, setBusqueda, setPeliculas, error, setError } =
+    useContext(PeliculasContext);
 
   const handleChange = (e) => {
     setBusqueda({ ...busqueda, [e.target.name]: e.target.value });
