@@ -2,8 +2,12 @@ import React from "react";
 import styled from "@emotion/styled";
 const Pie = styled.footer`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 30px;
+  align-items: center;
+  small {
+    color: #fff;
+  }
 `;
 const Footer = () => {
   return (
@@ -19,6 +23,7 @@ const Footer = () => {
           alt="Invitame un café en cafecito.app"
         />
       </a>
+      <small>&copy; 2022. Todos los derechos reservados.</small>
     </Pie>
   );
 };
